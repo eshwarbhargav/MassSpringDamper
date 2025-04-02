@@ -27,6 +27,7 @@ v0 = 4;
 Y = [x0; v0];
 options = odeset;
 [t,Y] = ode45(@MSode,tspan,Y,options); % where Y = [x-position v-speed]
+delete MSode.m
 figure()
 plot(t,Y)
 legend({'Position', 'Speed'});
@@ -76,3 +77,4 @@ end
 ylabel('System response [x(t)]')
 xlabel('Time [t]')
 title('Mass-Spring-Damper System');
+delete MSDode.m
